@@ -32,35 +32,3 @@ const albumButtons = document.querySelectorAll('.albumButton');
 albumButtons.forEach((button) => {
   button.addEventListener('click', getAlbum);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  const fetchQuote = async (quote) => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-  
-      quoteBox.innerHTML = `
-        <h2>${data.name}</h2>
-        <p>XP: ${data}</p>
-      `;
-    } catch (error) {
-      console.error(error);
-    }
-  };
