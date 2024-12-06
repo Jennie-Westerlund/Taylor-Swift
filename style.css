@@ -1,0 +1,54 @@
+
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    background-color: maroon;
+    background-image:url(Assets/Midnights-background.webp);
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-box {
+    background-color: wheat;
+    width: 84vw;
+}
+
+.quote {
+    white-space: pre-line;
+}
+
+.album-grid {
+    background-color: rgba(245, 222, 179, 0.295);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 100px;
+    padding: 50px;
+}
+
+.album-cover {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure images fit their containers */
+}
+
+.album-button {
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.album-button :hover {
+ opacity: 15%;
+ background-color: black;
+}
