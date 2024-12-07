@@ -1,3 +1,11 @@
+:root {
+    --Primary:rgb(215, 171, 132, 100);
+    --Primary-low-opacity: rgb(215, 171, 132, 35%);
+    --Dark: rgb(0, 0, 0);
+
+    --Folklore-font: "IM Fell DW Pica", serif;
+}
+
 
 * {
     box-sizing: border-box;
@@ -17,7 +25,7 @@ main {
 }
 
 .quote-box {
-    background-color:rgb(215, 171, 132, 100);
+    background-color: var(--Primary);
     width: 50vw;
     padding: 20px;
     margin-top: 20px;
@@ -32,15 +40,16 @@ h1 {
 .quote {
     white-space: pre-line;
     margin: 0 0 10px 0;
+    font-style: italic;
 }
 
-p {
+.song-title {
     margin: 0;
     font-style: italic;
 }
 
 .album-grid {
-    background-color: rgb(215, 171, 132, 35%);
+    background-color: var(--Primary-low-opacity);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
@@ -57,15 +66,33 @@ p {
 
 .album-button {
     padding: 0;
+    border: 0;
     width: fit-content;
     height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.album-button :hover {
+.album-name {
+    position: absolute; /* Position over the image */
+    color: white; /* Adjust text color as needed */
+    font-size: 1rem; /* Adjust font size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    pointer-events: none; /* Prevent interfering with hover state */
+}
+
+button:hover .album-name {
+    opacity: 1;
+}
+
+.album-cover:hover {
  opacity: 30%;
- background-color: black;
+ transition: opacity 0.3s ease;
 }
 
 button {
-    background-color:#000;
+    background-color: var(--Dark);
 }
