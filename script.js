@@ -1,8 +1,3 @@
-/* const url = 'https://potterapi-fedeperin.vercel.app/en/'; */
-/* const url = 'https://api.kanye.rest'; */
-/* const url = 'https://taylorswiftapi.onrender.com/get'; */
-
-/* const url = `https://taylorswiftapi.onrender.com/get${album}`; */
 const quoteBox = document.querySelector('.quote-box');
 const quote = document.querySelector('.quote');
 const songTitle = document.querySelector('.song-title');
@@ -32,3 +27,33 @@ const albumButtons = document.querySelectorAll('.album-button');
 albumButtons.forEach((button) => {
   button.addEventListener('click', getAlbum);
 });
+
+
+/* Ändrar hover designen till click vid touch  */
+
+/* if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+  const albumButtons = document.querySelectorAll('.album-button');
+  
+  albumButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          // Reset all album-name opacities
+          buttons.forEach(btn => {
+              const name = btn.querySelector('.album-name');
+              name.style.opacity = '0';
+              btn.querySelector('.album-cover').style.opacity = '1'; // Reset cover opacity
+          });
+
+          // Toggle the clicked button's album-name opacity
+          const name = button.querySelector('.album-name');
+          const cover = button.querySelector('.album-cover');
+
+          if (name.style.opacity === '1') {
+              name.style.opacity = '0';
+              cover.style.opacity = '1'; // Reset to fully visible
+          } else {
+              name.style.opacity = '1';
+              cover.style.opacity = '0.2'; // Apply low opacity
+          }
+      });
+  });
+} */
